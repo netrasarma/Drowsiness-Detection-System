@@ -15,7 +15,7 @@ leye_cascade = cv2.CascadeClassifier(r'lefteye.xml')
 reye_cascade = cv2.CascadeClassifier(r'righteye.xml')
 
 # Load the trained model
-model = load_model('drowsy.h5')
+model = load_model('drowsy.h5', custom_objects=None, compile=False)
 
 
 
