@@ -3,7 +3,8 @@ import cv2
 from keras.models import load_model
 import numpy as np
 from pygame import mixer
-
+import os
+os.environ["SDL_AUDIODRIVER"] = "dummy"
 #Sound
 mixer.init()
 sound = mixer.Sound('alarm.wav')
@@ -195,7 +196,7 @@ elif choice=="🎥 Video":
             )
     else:
         st.info("Please upload a video file to start detection.")
-import os
+
 if os.path.exists("temp_video.mp4"):
     os.remove("temp_video.mp4")
 
