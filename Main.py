@@ -4,18 +4,18 @@ import streamlit as st
 # ---------- PAGE SETUP -------------
 
 home_page=st.Page(
-    page="Pages/home.py",
+    page="home.py",
     title="Home",
     icon=":material/home:",
     default=True,
 )
 dds=st.Page(
-    page="Pages/drowsiness.py",
+    page="drowsiness.py",
     title="Drowsiness Detection System",
     icon=":material/sentiment_content:",
 )
 about=st.Page(
-    page="Pages/about.py",
+    page="about.py",
     title="About",
     icon=":material/groups:",
 )
