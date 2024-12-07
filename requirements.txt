@@ -3,4 +3,4 @@ keras
 numpy
 pygame
 streamlit
-tensorflow
+tensorflow==2.14.0
