@@ -6,19 +6,16 @@ from pygame import mixer
 
 #Sound
 mixer.init()
-sound = mixer.Sound('D_detection/alarm.wav')
+sound = mixer.Sound('alarm.wav')
 
 # Load Haar cascades
-face_cascade = cv2.CascadeClassifier(r'DDS\cascade\face.xml')
-leye_cascade = cv2.CascadeClassifier(r'DDS\cascade\lefteye.xml')
-reye_cascade = cv2.CascadeClassifier(r'DDS\cascade\righteye.xml')
+face_cascade = cv2.CascadeClassifier(r'face.xml')
+leye_cascade = cv2.CascadeClassifier(r'lefteye.xml')
+reye_cascade = cv2.CascadeClassifier(r'righteye.xml')
 
 # Load the trained model
-model = load_model('DDS/models/drowsy.h5')
+model = load_model('drowsy.h5')
 
-face_cascade = cv2.CascadeClassifier(r'DDS\cascade\face.xml')
-leye_cascade = cv2.CascadeClassifier(r'DDS\cascade\lefteye.xml')
-reye_cascade = cv2.CascadeClassifier(r'DDS\cascade\righteye.xml')
 
 
 # Initialize session state
