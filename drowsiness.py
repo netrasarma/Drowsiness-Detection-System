@@ -26,7 +26,7 @@ model = load_model('drowsy.h5')
 if "detection_running" not in st.session_state:
     st.session_state.detection_running = False
 
-def drowsiness_detection(video_source, sound, model, face_cascade, leye_cascade, reye_cascade):
+def drowsiness_detection(video_source, model, face_cascade, leye_cascade, reye_cascade):
     cap = cv2.VideoCapture(video_source)
     font = cv2.FONT_HERSHEY_COMPLEX_SMALL
     score = 0
@@ -130,7 +130,7 @@ if choice=="📷 Camera":
 
             st.session_state.detection_running = True
             camera_id = 0
-            drowsiness_detection(camera_id, sound, model, face_cascade, leye_cascade, reye_cascade)
+            drowsiness_detection(camera_id, model, face_cascade, leye_cascade, reye_cascade)
                 
 
     elif camera_choice == "Secondary":
@@ -142,7 +142,7 @@ if choice=="📷 Camera":
                 st.session_state.detection_running = False
             st.session_state.detection_running = True
             camera_id = 1
-            drowsiness_detection(camera_id, sound, model, face_cascade, leye_cascade, reye_cascade)
+            drowsiness_detection(camera_id, model, face_cascade, leye_cascade, reye_cascade)
 
             
 
@@ -160,7 +160,7 @@ if choice=="📷 Camera":
                     st.session_state.detection_running = False
 
                 st.session_state.detection_running = True
-                drowsiness_detection(camera_id, sound, model, face_cascade, leye_cascade, reye_cascade)
+                drowsiness_detection(camera_id, model, face_cascade, leye_cascade, reye_cascade)
 
     
         
@@ -204,7 +204,7 @@ elif choice=="🎥 Video":
             st.session_state.detection_running = True
 
             drowsiness_detection(
-                "temp_video.mp4", sound, model, face_cascade, leye_cascade, reye_cascade
+                "temp_video.mp4", model, face_cascade, leye_cascade, reye_cascade
             )
     else:
         st.info("Please upload a video file to start detection.")
