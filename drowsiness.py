@@ -5,8 +5,13 @@ import numpy as np
 from pygame import mixer
 
 #Sound
-mixer.init()
-sound = mixer.Sound('alarm.wav')
+try:
+    mixer.init()
+    sound = mixer.Sound('alarm.wav')
+    audio_supported = True
+except Exception as e:
+    st.warning(f"Audio support is unavailable: {e}")
+    audio_supported = False
 
 # Load Haar cascades
 face_cascade = cv2.CascadeClassifier(r'face.xml')
