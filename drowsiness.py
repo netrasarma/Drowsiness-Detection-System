@@ -179,7 +179,7 @@ elif choice=="🔗 URL":
         st.session_state.detection_running = True
 
         drowsiness_detection(
-            url, sound, model, face_cascade, leye_cascade, reye_cascade
+            url, model, face_cascade, leye_cascade, reye_cascade
         )
 
 
