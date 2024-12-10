@@ -4,3 +4,4 @@ numpy
 pygame
 streamlit
 tensorflow==2.12.0
+mixer
