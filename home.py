@@ -9,7 +9,7 @@ st.markdown("<h4 style='text-align: center;'>Welcome to</h4>",unsafe_allow_html=
 st.markdown("<h2 style='text-align: center;'>Drowsiness Detection System</h2>",unsafe_allow_html=True)
 st.markdown('<style>div.block-container{padding-top:3rem}</style',unsafe_allow_html=True)
 st.write("\n")
-st.image("DDs\image\dds.jpg")
+st.image("dds.jpg")
 
 st.subheader("Purpose")
 st.write("This system is designed to help prevent accidents caused by driver fatigue by detecting drowsiness in real-time.")
