@@ -90,7 +90,7 @@ def drowsiness_detection(video_source, sound, model, face_cascade, leye_cascade,
             # Trigger alarm for drowsiness
             if score > 12:
                 try:
-                    sound.play()
+                    #sound.play()
                     cv2.putText(small_frame, "Please Wake Up", (220, 450), font, 1, (0, 0, 255), 2)
                 except:
                     pass
